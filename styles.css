@@ -1,0 +1,27 @@
+body {
+  background-color: #fce4ec;
+  font-family: "Helvetica Neue", sans-serif;
+  color: #ff80ab;
+  text-align: center;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-top: 40px;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 30px;
+}
+
+a {
+  color: #ff80ab;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

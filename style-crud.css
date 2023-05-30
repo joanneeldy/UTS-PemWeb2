@@ -1,0 +1,74 @@
+body {
+  background-color: #fce4ec; /* Warna pink */
+  font-family: "Helvetica Neue", sans-serif; /* Font yang menarik */
+  color: #ff80ab; /* Aksen pink tua */
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+input[type="text"],
+select {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ff80ab; /* Aksen pink tua */
+  font-family: "Helvetica Neue", sans-serif;
+}
+
+input[type="submit"] {
+  padding: 8px 16px;
+  border-radius: 4px;
+  background-color: #ff80ab; /* Aksen pink tua */
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th,
+table td {
+  padding: 8px;
+  border-bottom: 1px solid #ff80ab; /* Aksen pink tua */
+}
+
+table th {
+  background-color: #fce4ec; /* Warna pink */
+  font-weight: bold;
+  text-align: left;
+}
+
+button {
+  background-color: #ff80ab; /* Aksen pink tua */
+  border: none;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+p {
+  margin-bottom: 8px;
+}
