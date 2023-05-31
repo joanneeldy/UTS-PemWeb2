@@ -10,11 +10,11 @@
     <h1>SIAKAD - Sistem Informasi Akademik</h1>
     <h2>Tentang Saya</h2>
     <img src="https://avatars.githubusercontent.com/u/95136347?v=4" alt="Foto Profil">
-    <p>Nama: Joanne Landy Tanreece</p>
-    <p>Saya seorang perempuan yang aktif dalam dunia IT dan sedang menempuh pendidikan di Universitas Sistem Informasi Asia (UNSIA). Saya memiliki minat yang kuat dalam analisis data dan telah memperoleh sertifikasi sebagai Data Analyst dari Google.</p>
+    <p>Nama: Joanne Landy Tantreece</p>
+    <p>Saya seorang perempuan yang aktif dalam dunia IT dan sedang menempuh pendidikan S1 di Universitas Siber Asia (UNSIA). Saya memiliki minat yang kuat dalam analisis data dan telah memperoleh sertifikasi sebagai Data Analyst dari Google.</p>
 
-    <h2>Matakuliah</h2>
-    <a href="crud_matakuliah.php">Kelola Data Matakuliah</a>
+    <h2>Mata Kuliah</h2>
+    <a href="crud_matakuliah.php">Kelola Data Mata Kuliah</a>
 
     <h2>Dosen</h2>
     <a href="crud_dosen.php">Kelola Data Dosen</a>

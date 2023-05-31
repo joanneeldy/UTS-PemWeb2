@@ -2,7 +2,7 @@
 // Include file konfigurasi database
 include 'config.php';
 
-// Fungsi untuk menambahkan data matakuliah
+// Fungsi untuk menambahkan data mata kuliah
 function tambahMatakuliah($conn, $nama, $kodeMatakuliah, $deskripsi)
 {
     $sql = "INSERT INTO Matakuliah (Nama, KodeMatakuliah, Deskripsi) VALUES ('$nama', '$kodeMatakuliah', '$deskripsi')";
@@ -30,7 +30,7 @@ function ambilSemuaMatakuliah($conn)
     return $matakuliah;
 }
 
-// Fungsi untuk mengambil data matakuliah berdasarkan ID
+// Fungsi untuk mengambil data mata kuliah berdasarkan ID
 function ambilMatakuliahByID($conn, $id)
 {
     $sql = "SELECT * FROM Matakuliah WHERE ID=$id";
@@ -44,7 +44,7 @@ function ambilMatakuliahByID($conn, $id)
     }
 }
 
-// Fungsi untuk memperbarui data matakuliah
+// Fungsi untuk memperbarui data mata kuliah
 function perbaruiMatakuliah($conn, $id, $nama, $kodeMatakuliah, $deskripsi)
 {
     $sql = "UPDATE Matakuliah SET Nama='$nama', KodeMatakuliah='$kodeMatakuliah', Deskripsi='$deskripsi' WHERE ID=$id";
@@ -56,7 +56,7 @@ function perbaruiMatakuliah($conn, $id, $nama, $kodeMatakuliah, $deskripsi)
     }
 }
 
-// Fungsi untuk menghapus data matakuliah berdasarkan ID
+// Fungsi untuk menghapus data mata kuliah berdasarkan ID
 function hapusMatakuliah($conn, $id)
 {
     $sql = "DELETE FROM Matakuliah WHERE ID=$id";
@@ -75,7 +75,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["tambah"])) {
     $deskripsi = $_POST["deskripsi"];
 
     if (tambahMatakuliah($conn, $nama, $kodeMatakuliah, $deskripsi)) {
-        echo "Data matakuliah berhasil ditambahkan.";
+        echo "Data mata kuliah berhasil ditambahkan.";
     }
 }
 
@@ -87,7 +87,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["perbarui"])) {
     $deskripsi = $_POST["deskripsi"];
 
     if (perbaruiMatakuliah($conn, $id, $nama, $kodeMatakuliah, $deskripsi)) {
-        echo "Data matakuliah berhasil diperbarui.";
+        echo "Data mata kuliah berhasil diperbarui.";
     }
 }
 
@@ -96,7 +96,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["hapus"])) {
     $id = $_POST["id"];
 
     if (hapusMatakuliah($conn, $id)) {
-        echo "Data matakuliah berhasil dihapus.";
+        echo "Data mata kuliah berhasil dihapus.";
     }
 }
 
@@ -108,15 +108,15 @@ $matakuliah = ambilSemuaMatakuliah($conn);
 <html>
 
 <head>
-    <title>CRUD Matakuliah</title>
+    <title>CRUD Mata Kuliah</title>
     <link rel="stylesheet" type="text/css" href="style-crud.css">
 </head>
 
 <body>
-    <h2>CRUD Matakuliah</h2>
+    <h2>CRUD Mata Kuliah</h2>
 
     <!-- Form tambah matakuliah -->
-    <h3>Tambah Matakuliah</h3>
+    <h3>Tambah Mata Kuliah</h3>
     <form method="POST" action="<?php echo $_SERVER["PHP_SELF"]; ?>">
         <input type="text" name="nama" placeholder="Nama Matakuliah" required><br>
         <input type="text" name="kodeMatakuliah" placeholder="Kode Matakuliah" required><br>
@@ -125,13 +125,13 @@ $matakuliah = ambilSemuaMatakuliah($conn);
     </form>
 
     <!-- Tabel data matakuliah -->
-    <h3>Data Matakuliah</h3>
+    <h3>Data Mata Kuliah</h3>
     <?php if (count($matakuliah) > 0) : ?>
         <table>
             <tr>
                 <th>ID</th>
-                <th>Nama Matakuliah</th>
-                <th>Kode Matakuliah</th>
+                <th>Nama Mata Kuliah</th>
+                <th>Kode Mata Kuliah</th>
                 <th>Deskripsi</th>
                 <th>Aksi</th>
             </tr>
@@ -152,7 +152,7 @@ $matakuliah = ambilSemuaMatakuliah($conn);
             <?php endforeach; ?>
         </table>
     <?php else : ?>
-        <p>Tidak ada data matakuliah.</p>
+        <p>Tidak ada data mata kuliah.</p>
     <?php endif; ?>
 
     <!-- Form edit matakuliah -->
@@ -163,7 +163,7 @@ $matakuliah = ambilSemuaMatakuliah($conn);
 
         if ($matakuliah !== false) :
         ?>
-            <h3>Edit Matakuliah</h3>
+            <h3>Edit Mata Kuliah</h3>
             <form method="POST" action="<?php echo $_SERVER["PHP_SELF"]; ?>">
                 <input type="hidden" name="id" value="<?php echo $matakuliah["ID"]; ?>">
                 <input type="text" name="nama" placeholder="Nama Matakuliah" value="<?php echo $matakuliah["Nama"]; ?>" required><br>
@@ -172,10 +172,10 @@ $matakuliah = ambilSemuaMatakuliah($conn);
                 <input type="submit" name="perbarui" value="Perbarui">
             </form>
         <?php else : ?>
-            <p>Data matakuliah tidak ditemukan.</p>
+            <p>Data mata kuliah tidak ditemukan.</p>
         <?php endif; ?>
     <?php endif; ?>
-    <button><a href="index.php">balik ke halaman utama</a></button>
+    <button><a href="index.php">Balik ke Halaman Utama</a></button>
 </body>
 
 </html>
